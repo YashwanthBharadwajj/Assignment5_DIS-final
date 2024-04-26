@@ -1,0 +1,73 @@
+﻿@{
+    ViewData["Title"] = "About Us";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="@Url.Action("Index", "Home")">Smart Spender</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<div class="container">
+    <h1>About Us</h1>
+    <p>This page provides information about the developers and the project. <a href="https://github.com/YashwanthBharadwajj/Assignment3_LookAndFeel" target="_blank">Project Repository</a></p>
+
+    <!-- Team Members Section -->
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card h-100">
+                <img src="~/images/Yashwanth.jpeg" alt="Yashwanth" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Yashwanth</h5>
+                    <p class="card-text">Worked on index and income.html page and also Crafted robust database models and ensured mobile responsiveness with key HTML and CSS implementations.</p>
+                    <a href="https://github.com/yashwanthbharadwajj" class="btn btn-primary mt-auto">Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <img src="~/images/Gowtham.jpeg" alt="Gowtham" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Gowtham</h5>
+                    <p class="card-text">Worked on expense details.html page and focused on aesthetic design, developing seamless fade-in animations with JavaScript and crafting a responsive layout.</p>
+                    <a href="https://github.com/gowthamlekkala" class="btn btn-primary mt-auto">Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <img src="~/images/Mahesh.jpeg" alt="Mahesh" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Mahesh</h5>
+                    <p class="card-text">Worked on Financial Overview.html and also Pioneered dynamic table designs and sophisticated image transition effects to enhance user experience on the website.</p>
+                    <a href="https://github.com/maheshleela09" class="btn btn-primary mt-auto">Git</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card h-100">
+                <img src="~/images/Sai Priya.jpeg" alt="Sai Priya" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Sai Priya</h5>
+                    <p class="card-text">Worked on About Us page and Engineered intuitive table interfaces and image transitions to streamline navigation and visual appeal.</p>
+                    <a href="https://github.com/priyamallampati" class="btn btn-primary mt-auto">Git</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Database Model Image -->
+    <div class="text-center mt-4">
+        <h3>Database model driving the website</h3>
+        <img src="~/images/ERDiagram.png" alt="Database Model" class="img-fluid">
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="~/js/script.js"></script>
+}
