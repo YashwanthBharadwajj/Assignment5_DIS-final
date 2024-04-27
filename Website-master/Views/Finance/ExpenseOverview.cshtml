@@ -1,18 +1,60 @@
-﻿@model List<SmartSpender.Models.Expense>
-
-@{
-    ViewData["Title"] = "Expense Overview";
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Expense Overview";
 }
 
-<div class="container">
-    <h1>Financial Overview</h1>
-    <div class="list-group">
-        @foreach (var expense in Model)
-        {
-            <a href="#" class="list-group-item list-group-item-action" data-item="@expense.Item">
-                @expense.Category - @expense.Item: $@expense.Amount
-                <button class="btn btn-danger btn-sm float-right delete-btn" onclick="deleteTransaction(this)">Delete</button>
-            </a>
-        }
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light background-color-header">
+    <a class="navbar-brand" href="@Url.Action("Index", "Home")">Smart Spender</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Income", "Finance")">Income</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("ExpenseDetails", "Finance")">Expense Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Dashboard", "Home")">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("About", "Home")">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>Expense Distribution</h2>
+            <canvas id="expensespieChart"></canvas>
+        </div>
+        <div class="col-md-6">
+            <h2>Income Sources</h2>
+            <canvas id="incomeBarChart"></canvas>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-12">
+            <h2>Quarterly Income vs Expenses</h2>
+            <canvas id="incomeVsExpensesLineChart"></canvas>
+        </div>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        @* All your JavaScript here, potentially utilizing Razor syntax to inject server-side data into the scripts *@
+    </script>
+}
